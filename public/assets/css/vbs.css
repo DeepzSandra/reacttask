@@ -1,0 +1,1312 @@
+/********** 1. IMPORTS **********/
+/********************************/
+@import url('bootstrap.min.css');
+@import url('vbs-overlay-effect.css');
+@import url('vbs-push-effect.css');
+@import url('vbs-shrink-effect.css');
+@import url('vbs-rightsidebar.css');
+@import url('vbs-horizontal-navigation.css');
+@import url('vbs-theme-color.css');
+@import url('extra.css');
+@import url('header.css');
+/********** 2. RESET STYLES **********/
+/*************************************/
+
+/* ********** Default Theme Style************* */
+body,html {
+    
+}
+body{position:relative;}
+#vbsapp-wrapper a:focus {
+    outline: none;
+}
+#vbsapp-wrapper {
+    /*background: #eef1f6;*/
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+	font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+	direction: ltr;
+    line-height: 20px;
+    font-size: 13px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+	width: 100%;
+	margin: 0;
+    padding: 0;
+}
+ 
+/************** 3. Theme Header Style Start Here ********************/
+
+#vbs-header {
+    background: #fff none repeat scroll 0 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+	position:relative;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.vbs-left-header {
+    background: #069570;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 50px;
+    position: absolute;
+    float: left;
+    text-align: center;
+    width: 230px;
+    z-index: 999;
+}
+.vbs-left-header a {
+    color: #FFF;
+}
+.vbs-left-header a:hover,
+.vbs-left-header a:focus {
+    color: #FFF;
+    text-decoration: none;
+}
+.vbs-left-header a i {
+    color: #003c70;
+    font-size: 22px;
+    position: relative;
+    top: 3px;
+}
+.vbs-right-header {
+    background: #fff none repeat scroll 0 0;
+    height: 50px;
+    line-height: 50px;
+    z-index: 101;
+	margin-left: 230px;
+	position: relative;
+}
+.vbs-right-header > ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.vbs-right-header li {
+  display: inline;
+  float: left;
+}
+.vbs-right-header > li  a {
+    color: #7e7e7e;
+    padding: 17px 15px;
+}
+.vbs-right-header li a:hover,
+.vbs-right-header li a:focus {
+    background: #efefef;
+    text-decoration: none;
+}
+.vbs-right-header a i {
+    color: #7e7e7e;
+    font-size: 14px;
+}
+.right-navbar {
+    float: right;
+	padding-right: 7px !important;
+}
+.right-navbar li a i {
+    font-size: 14px;
+}
+.left-navbar > li:first-child {
+    padding-left: 50px;
+}
+.vbs-sidebar-toggle a:after {
+    background: transparent;
+    border: 0px solid #efefef;
+    content: "\f0c9";
+    font-family: FontAwesome;
+    font-size: 14px;
+    line-height: 50px;
+    padding: 0px 17px;
+    position: absolute;
+    color: #7e7e7e;
+    z-index: 1000;
+}
+.vbs-sidebar-toggle a:hover:after {
+    background: #efefef;
+}
+.vbs-left-header > .vbs-sidebar-toggle > a {
+    display: none
+}
+#vbs-header .vbs-left-header[vbs-position-type="relative"] {
+    position: relative;
+}
+#vbs-header .vbs-left-header[vbs-position-type="absolute"] {
+    position: absolute;
+}
+#vbs-header .vbs-left-header[vbs-position-type="fixed"] {
+    position: fixed;
+}
+#vbs-header .vbs-right-header[vbs-position-type="relative"] {
+    position: relative;
+}
+#vbs-header .vbs-right-header[vbs-position-type="absolute"] {
+    position: absolute;
+}
+#vbs-header .vbs-right-header[vbs-position-type="fixed"] {
+	padding-right: 230px;
+    position: fixed;
+    width: 100%;
+}
+/*******************************Theme Header Style Close Here ***********************************/
+/******************************* 4. main container Style start Here ***********************************/
+#vbsapp-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+	position:relative;
+	clear:both;
+}
+/************************* 4.1 Theme Left Panel Style Start Here *********************************/
+#vbs-left-panel {
+    background: #FFF none repeat scroll 0 0;
+    color: #7e7e7e;
+    width: 230px;
+    top: 0;
+	position:absolute;
+	float:left;
+	min-height:100%;
+    z-index: 100;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+#vbs-left-panel .profile-box {
+    border-bottom: 1px solid #efefef;
+    min-height: 50px;
+    padding: 5px 15px;
+    position: relative;
+}
+#vbs-left-panel .profile-box .media a img {
+    width: 40px;
+    height: 40px;
+}
+
+#vbs-left-panel .profile-box .media {
+    position: relative;
+}
+#vbs-left-panel .profile-box .media a {
+    margin-top: 2px;
+}
+#vbs-left-panel .profile-box .media a > img {
+    border: 1px solid #efefef;
+}
+ 
+
+#vbs-left-panel ul {
+    margin: 0;
+    padding: 0;
+}
+#vbs-left-panel .nav-level {
+    padding: 5px 15px;
+    border-top: 1px solid #efefef;
+    font-weight: bold;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu {
+  list-style: none;}
+
+#vbs-left-panel .nav-level:first-child {
+    border-top: 0px solid #efefef;
+}
+#vbs-left-panel .panel-list > li > a {
+    /*background: #FFF;*/
+    border-top: 1px solid #efefef;
+    color: #7e7e7e;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 10px;
+    position: relative;
+}
+#vbs-left-panel .panel-list > li:last-child > a {
+    border-bottom: 1px solid #efefef;
+}
+#vbs-left-panel .panel-list > li:first-child > a {
+    border-top: 0px solid #efefef;
+}
+#vbs-left-panel .panel-list > li > a:hover,
+#vbs-left-panel .panel-list > li > a:focus {
+    color: #000;
+    background: #f1f1f1;
+}
+#vbs-left-panel .panel-list > li.active > a {
+    background: #f1f1f1;
+    border-top: 1px solid #efefef;
+    color: #000;
+}
+#vbs-left-panel .panel-list > li > a > i {
+    display: inline;
+    font-size: 14px;
+    padding-right: 6px;
+}
+#vbs-left-panel .panel-list > li > a span.menu-text {
+    display: inline-block;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > a:after {
+    font-family: FontAwesome;
+    content: "\f107";
+    font-size: 15px;
+    position: relative;
+    float: right;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu.opened > a {
+    background: #f1f1f1;
+    color: #000;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu.opened > a:after {
+    font-family: FontAwesome;
+    content: "\f106" !important;
+    font-size: 15px;
+    float: right;
+    position: relative;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu li.vbs-has-menu > a:after {
+    font-family: FontAwesome;
+    content: "\f103";
+    font-size: 15px;
+    position: relative;
+    float: right;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu li.vbs-has-menu.opened > a:after {
+    font-family: FontAwesome;
+    content: "\f102";
+    font-size: 15px;
+    position: relative;
+    float: right;
+}
+#vbs-left-panel .panel-list ul {
+    background: #fafafa;
+    box-shadow: -1px 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+#vbs-left-panel .panel-list ul.vbs-sub-menu li > a {
+    background: transparent;
+    border-top: 1px solid #efefef;
+    color: #7e7e7e;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 10px;
+    position: relative;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu {
+    display: none;
+}
+#vbs-left-panel .panel-list li.vbs-has-menu > ul.vbs-sub-menu li > a:hover,
+#vbs-left-panel .panel-list li.vbs-has-menu > ul.vbs-sub-menu li > a:focus {
+    text-decoration: none;
+    color: #000;
+    background: #f1f1f1;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > ul ul {
+    display: none;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu.opened > ul {
+    display: block;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu.opened > ul > li.vbs-has-menu.opened > ul {
+    display: block;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu.opened > ul > li.vbs-has-menu.opened > ul > li.vbs-has-menu.opened > ul {
+    display: block;
+}
+
+#vbs-left-panel .panel-list > li.vbs-has-menu.active > ul {
+    display: block;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu.active > ul > li.vbs-has-menu.active > ul {
+    display: block;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu.active > ul > li.vbs-has-menu.active > ul > li.vbs-has-menu.active > ul {
+    display: block;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > ul > li > a span.menu-text {
+    padding-left: 15px;
+    position: relative;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu {
+
+  list-style: outside none none;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu  li.vbs-has-menu > ul.vbs-sub-menu {
+
+  list-style: outside none none;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu {
+
+  list-style: outside none none;
+
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > ul > li.vbs-has-menu > ul > li > a span.menu-text {
+    padding-left: 25px;
+    position: relative;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > ul > li.vbs-has-menu > ul > li > ul > li > a span.menu-text {
+    padding-left: 35px;
+    position: relative;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > ul > li.vbs-has-menu > ul > li > ul > li > ul > li > a span.menu-text {
+    padding-left: 40px;
+    position: relative;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu > li > a span.menu-text:before {
+    font-family: FontAwesome;
+    content: "\f0da";
+    font-size: 14px;
+    position: relative;
+    float: left;
+    left: 4px;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu > ul.vbs-sub-menu > li > a span.menu-text:before {
+    font-family: FontAwesome;
+    content: "\f0da";
+    font-size: 12px;
+    position: relative;
+    float: left;
+    left: 15px;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu > ul.vbs-sub-menu > li > a span.menu-text:before {
+    font-family: FontAwesome;
+    content: "\f0da";
+    font-size: 14px;
+    position: relative;
+    float: left;
+    left: 18px;
+}
+#vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu > ul.vbs-sub-menu > li > a span.menu-text:before {
+    font-family: FontAwesome;
+    content: "\f0da";
+    font-size: 12px;
+    position: relative;
+    float: left;
+    left: 30px;
+}
+#vbs-left-panel .panel-list li.active > a .selected {
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid #7e7e7e;
+    border-top: 7px solid transparent;
+    display: inline-block;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 13px;
+    vertical-align: middle;
+    width: 0;
+}
+#vbs-left-panel .panel-list li.vbs-has-menu.active > a .selected {
+    display: none;
+}
+#vbs-left-panel .panel-list li a .label {
+    border-radius: 0.25em;
+    color: #7e7e7e;
+    display: inline;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    padding: 4px 3px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+.sul {
+    background-color: #ebebeb;
+}
+
+#vbs-left-panel[vbs-position-type="relative"] {
+    position: relative;
+}
+#vbs-left-panel[vbs-position-type="absolute"] {
+    position: absolute;
+}
+#vbs-left-panel[vbs-position-type="fixed"] {
+    position: fixed;
+	top:50px;
+}
+
+/********************************** Theme Left Panel Style Close Here ******************************/
+/*************************** 4.2 Theme Content Section Style Start Here ********************************/
+#main-content {
+    margin-left: 230px;
+	position:relative;
+}
+/******************* Theme Content Section Style Close Here *******************************/
+/****************** 4.3 Minimized Left Panel Style Start Here *********************************/
+#vbs-header.vbs-minimized-lpanel > .vbs-right-header[vbs-position-type="fixed"] {
+  margin-left: 50px;
+  padding-right: 50px;
+}
+#vbs-header.vbs-minimized-lpanel > .vbs-left-header {
+    width: 50px;
+}
+#vbs-header.vbs-minimized-lpanel > .vbs-left-header > a > span {
+    display: none;
+}
+#vbs-header.vbs-minimized-lpanel > .vbs-right-header {
+  margin-left: 50px;
+  padding-right:0px;
+}
+.vbs-minimized-lpanel #vbs-left-panel {
+    width: 50px;
+}
+.vbs-minimized-lpanel #vbs-left-panel .profile-box {
+    border-bottom: 0px solid #efefef;
+}
+.vbs-minimized-lpanel #vbs-left-panel .media-body {
+    display: none;
+}
+.vbs-minimized-lpanel #vbs-left-panel .profile-box {
+    padding: 5px;
+}
+.vbs-minimized-lpanel #vbs-left-panel .nav-level {
+    display: none;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li > a span.menu-text {
+    display: none;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu > a:after {
+    display: none;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li > a > i {
+    display: inline;
+    font-size: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li:hover > a,
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li:focus > a {
+    display: block;
+    position: relative;
+    width: 230px;
+    margin-bottom: -1px;
+    border-radius: 0px 4px 4px 0px;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li:hover > a,
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li:focus > a {
+    border-radius: 0px 4px 4px 0px;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu:hover > a,
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu:focus > a {
+    border-radius: 0px 4px 0px 0px;
+    background: #f1f1f1;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li:hover > a span.menu-text,
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li:focus > a span.menu-text {
+    display: inline-block;
+    position: absolute;
+    left: 52px;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list ul.vbs-sub-menu li {
+    list-style: none;
+}
+
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu {
+    display: none !important;
+    position: absolute;
+    left: 50px;
+    width: 180px;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu:hover > ul.vbs-sub-menu,
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu:focus > ul.vbs-sub-menu {
+    display: block !important;
+    border-right: 1px solid #efefef;
+	width: 180px;
+	left: 50px;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu ul.vbs-sub-menu {
+    display: none !important;
+    position: absolute;
+    width: 180px;
+    left: 0;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu:hover > ul.vbs-sub-menu ul.vbs-sub-menu,
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu:focus > ul.vbs-sub-menu ul.vbs-sub-menu {
+    display: none !important;
+    left: 0px;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu:hover > ul.vbs-sub-menu,
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu:focus > ul.vbs-sub-menu {
+    display: block !important;
+    position: relative;
+    left: 0px;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu:hover > ul.vbs-sub-menu,
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu:focus > ul.vbs-sub-menu {
+    display: block !important;
+    position: relative;
+    left: 0px;
+}
+
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu li.vbs-has-menu > a:after {
+    display: none;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu li.vbs-has-menu > a:after {
+    font-family: FontAwesome;
+    content: "\f103";
+    font-size: 15px;
+    position: relative;
+    float: right;
+    display: block;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu li.vbs-has-menu:hover > a:after,
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu li.vbs-has-menu:focus > a:after {
+    font-family: FontAwesome;
+    content: "\f102";
+    font-size: 15px;
+    position: relative;
+    float: right;
+    display: block;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list li.vbs-has-menu.active > li.active a .selected {
+    display: block;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.active:hover > a .selected,
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.active:focus > a .selected {
+    display: none;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu > ul.vbs-sub-menu li > a span.menu-text {
+    padding-left: 15px;
+    position: relative;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu > ul.vbs-sub-menu > li > a span.menu-text:before {
+    left: 4px;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu > ul.vbs-sub-menu > li.vbs-has-menu > ul.vbs-sub-menu > li > a span.menu-text:before {
+    left: 4px;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list li .label {
+    display: none;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list li:hover a .label {
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+.vbs-minimized-lpanel #vbs-left-panel .panel-list > li.vbs-has-menu.opened > a {
+    background: #f1f1f1;
+    color: #000;
+}
+.vbs-minimized-lpanel #main-content {
+    margin-left: 50px;
+}
+/****************** Minimized Left Panel Style Start Here *********************************/
+
+/******************* 4.4 Theme Style for Phone start here***************************************/
+ 
+#vbsapp-wrapper[vbs-device-type="phone"].vbs-hide-lpanel #vbs-left-panel {
+    display: none;
+}
+#vbsapp-wrapper[vbs-device-type="phone"] #vbs-header{
+    position:none;
+	height:100px;
+}
+#vbsapp-wrapper[vbs-device-type="phone"] .vbs-left-header {
+    width: 100%;
+    float: none;
+}
+#vbsapp-wrapper[vbs-device-type="phone"] #vbs-left-panel[vbs-position-type="fixed"] {
+  top: 100px;
+}
+#vbsapp-wrapper[vbs-device-type="phone"] .vbs-right-header {
+    width: 100%;
+	padding-left: 0px !important;
+	position: relative;
+	z-index: 999;
+	top: 50px;
+}
+#vbsapp-wrapper[vbs-device-type="phone"].vbs-hide-lpanel #vbs-left-panel {display:none;}
+#vbsapp-wrapper[vbs-device-type="phone"].vbs-hide-lpanel .vbs-right-header {
+  margin-left: 0px;
+}
+#vbsapp-wrapper[vbs-device-type="phone"] .vbs-right-header {
+  margin-left: 0px;
+}
+
+#vbsapp-wrapper[vbs-device-type="phone"] #vbs-left-panel {
+    display: block;
+    z-index: 1024;
+}
+#vbsapp-wrapper[vbs-device-type="phone"] #main-content {
+    margin-left: 0px;
+}
+
+
+
+#vbsapp-wrapper[vbs-device-type="phone"] .vbs-left-header > .vbs-sidebar-toggle > a {
+    display: block;
+}
+#vbsapp-wrapper[vbs-device-type="phone"] #vbs-header > .vbs-right-header .vbs-sidebar-toggle a:after {
+    display: none !important;
+}
+#vbsapp-wrapper[vbs-device-type="desktop"] .vbs-left-header .vbs-sidebar-toggle a:after {
+    display: none !important;
+}
+#vbsapp-wrapper[vbs-device-type="tablet"] .vbs-left-header .vbs-sidebar-toggle a:after {
+    display: none !important;
+}
+#vbsapp-wrapper[vbs-device-type="phone"] .vbs-left-header .vbs-sidebar-toggle a:after {
+    background: transparent;
+    border-radius: 4px;
+    content: "";
+    font-family: FontAwesome;
+    font-size: 16px;
+    left: 5px;
+    line-height: 39px;
+    padding: 1px 13px;
+    position: absolute;
+    top: 3px;
+    z-index: 1000;
+    display: block !important;
+    color: #003c70;
+    border: 0px solid #003c70;
+    font-size: 14px;
+}
+#vbsapp-wrapper[vbs-device-type="phone"].vbs-hide-lpanel  #vbsapp-container[vbs-lpanel-effect="shrink"] #main-content {
+  margin-left: 0px;
+}
+#vbsapp-wrapper[vbs-device-type="phone"]  #vbsapp-container[vbs-lpanel-effect="shrink"] #main-content {
+  margin-left: 230px;
+}
+#vbsapp-wrapper[vbs-device-type="phone"].vbs-hide-lpanel  #vbsapp-container[vbs-lpanel-effect="overlay"] #main-content {
+   margin-left: 0px;
+}
+#vbsapp-wrapper[vbs-device-type="phone"]  #vbsapp-container[vbs-lpanel-effect="overlay"] #main-content {
+   margin-left: 0px;
+}
+#vbsapp-wrapper[vbs-device-type="phone"].vbs-hide-lpanel  #vbsapp-container[vbs-lpanel-effect="push"] #main-content {
+   margin-left: 0px;
+   margin-right: 0px;
+}
+#vbsapp-wrapper[vbs-device-type="phone"]  #vbsapp-container[vbs-lpanel-effect="push"] #main-content {
+   margin-left: 230px;
+   margin-right:-230px;
+}
+#vbsapp-wrapper[vbs-device-type="phone"].vbs-hide-lpanel #vbs-header[vbs-lpanel-effect="shrink"] .vbs-right-header[vbs-position-type="relative"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#vbsapp-wrapper[vbs-device-type="phone"].vbs-hide-lpanel #vbs-header[vbs-lpanel-effect="shrink"] .vbs-right-header[vbs-position-type="fixed"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#vbsapp-wrapper[vbs-device-type="phone"] #vbs-header[vbs-lpanel-effect="shrink"] .vbs-right-header[vbs-position-type="relative"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#vbsapp-wrapper[vbs-device-type="phone"] #vbs-header[vbs-lpanel-effect="shrink"] .vbs-right-header[vbs-position-type="fixed"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#vbsapp-wrapper[vbs-device-type="phone"].vbs-hide-lpanel #vbs-header[vbs-lpanel-effect="overlay"] .vbs-right-header[vbs-position-type="relative"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#vbsapp-wrapper[vbs-device-type="phone"].vbs-hide-lpanel #vbs-header[vbs-lpanel-effect="overlay"] .vbs-right-header[vbs-position-type="fixed"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#vbsapp-wrapper[vbs-device-type="phone"]#vbs-header[vbs-lpanel-effect="overlay"] .vbs-right-header[vbs-position-type="relative"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#vbsapp-wrapper[vbs-device-type="phone"] #vbs-header[vbs-lpanel-effect="overlay"] .vbs-right-header[vbs-position-type="fixed"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+
+#vbsapp-wrapper[vbs-device-type="phone"].vbs-hide-lpanel #vbs-header[vbs-lpanel-effect="push"] .vbs-right-header[vbs-position-type="relative"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#vbsapp-wrapper[vbs-device-type="phone"].vbs-hide-lpanel #vbs-header[vbs-lpanel-effect="push"] .vbs-right-header[vbs-position-type="fixed"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#vbsapp-wrapper[vbs-device-type="phone"] #vbs-header[vbs-lpanel-effect="push"] .vbs-right-header[vbs-position-type="relative"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#vbsapp-wrapper[vbs-device-type="phone"] #vbs-header[vbs-lpanel-effect="push"] .vbs-right-header[vbs-position-type="fixed"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+/****************************** Theme Style for Phone Close here **********************************/
+
+/*******************************main container Style Close Here ***********************************/
+
+/****************************** Default Theme Style Close ******************************************/
+
+/*Boxed Theme Layout Style Start*/
+body[theme-layout="box-layout"] #vbsapp-wrapper[vbs-device-type="desktop"] {
+	width:96%;
+	margin:0 auto;
+}
+/*Boxed Theme Layout Style Close*/
+ 
+/*Theme Background Color in Start */
+body[theme-layout="box-layout" vbs-nav-placement="right"] #vbsapp-wrapper[vbs-device-type="desktop"]{
+	margin:0 auto;
+}
+.bgback{
+	background-image: url("/assets/images/gradient.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body[theme-bg="bg1"]{
+     background-image: url("/assets/images/bg1.png");
+}
+body[theme-bg="bg2"]{
+	 background-image: url("../images/bg2.png");
+}
+body[theme-bg="bg3"]{
+	 background-image: url("../images/bg3.png");
+}
+body[theme-bg="bg4"]{
+	 background-image: url("../images/bg4.png");
+}
+body[theme-bg="bg5"]{
+	 background-image: url("../images/bg5.png");
+}
+body[theme-bg="bg6"]{
+	 background-image: url("../images/bg6.png");
+}
+body[theme-bg="bg7"]{
+	 background-image: url("../images/bg7.png");
+}
+body[theme-bg="bg8"]{
+	 background-image: url("../images/bg8.png");
+}
+body[theme-bg="bg9"]{
+	 background-image: url("../images/bg9.png");
+}
+/*Theme Background Color in Close */
+
+/*Custom style*/
+.btn-width-150  {
+    width: 150px;
+}
+.theme-panel .panel-heading {
+    text-align: left !important;
+}
+.mleft-10 {
+    margin-left: 10px;
+}
+.pagination {
+    margin: 0 !important;
+}
+
+/*Login form styles*/
+
+.login-form {
+    margin-top: 60px;
+}
+form[role=login] {
+    color: #5d5d5d;
+    background:#fdffe7;
+    padding: 26px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+form[role=login] img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+form[role=login] input,
+form[role=login] button {
+    font-size: 18px;
+    margin: 16px 0;
+}
+form[role=login] > div {
+    text-align: center;
+}
+.form-links {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 50px;
+}
+.form-links a {
+    color: #fff;
+}
+
+.chkbox {
+    width: 20px;
+    height: 20px;
+}
+.mandatory-star {
+     color: red;
+  }
+.selectchkbox {
+    width: 18px;
+    height: 18px;
+}
+
+/*custom notification styles*/
+.notification-title {
+    font-size: 18px !important;
+}
+.notification-message {
+    font-size: 16px !important;
+}
+
+.img-responsive {
+    margin: 0 auto !important;
+}
+
+.fixed-table-pagination {
+    margin-top: 10px;
+}
+
+
+/*Styles for date picker*/
+.react-datepicker {
+  font-size: 1.3rem !important;
+}
+
+.react-datepicker__current-month {
+  font-size: 1.5rem !important;
+}
+
+.react-datepicker__header {
+  padding-top: 6px !important;
+}
+
+.react-datepicker__navigation {
+  top: 13px !important;
+}
+
+.react-datepicker__day-name, .react-datepicker__day {
+  margin: 0.5rem !important;
+}
+
+/*start searchable combo*/
+.Select {
+  position: relative;
+}
+.Select,
+.Select div,
+.Select input,
+.Select span {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.Select.is-disabled > .Select-control {
+  background-color: #f9f9f9;
+}
+.Select.is-disabled > .Select-control:hover {
+  box-shadow: none;
+}
+.Select.is-disabled .Select-arrow-zone {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.35;
+}
+.Select-control {
+  background-color: #fff;
+  border-color: #d9d9d9 #ccc #b3b3b3;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  color: #333;
+  cursor: default;
+  display: table;
+  border-spacing: 0;
+  border-collapse: separate;
+  height: 36px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.Select-control:hover {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+.Select-control .Select-input:focus {
+  outline: none;
+}
+.is-searchable.is-open > .Select-control {
+  cursor: text;
+}
+.is-open > .Select-control {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background: #fff;
+  border-color: #b3b3b3 #ccc #d9d9d9;
+}
+.is-open > .Select-control .Select-arrow {
+  top: -2px;
+  border-color: transparent transparent #999;
+  border-width: 0 5px 5px;
+}
+.is-searchable.is-focused:not(.is-open) > .Select-control {
+  cursor: text;
+}
+.is-focused:not(.is-open) > .Select-control {
+  border-color: #007eff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(0, 126, 255, 0.1);
+}
+.Select-placeholder,
+.Select--single > .Select-control .Select-value {
+  bottom: 0;
+  color: #aaa;
+  left: 0;
+  line-height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.has-value.Select--single > .Select-control .Select-value .Select-value-label,
+.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+  color: #333;
+}
+.has-value.Select--single > .Select-control .Select-value a.Select-value-label,
+.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label {
+  cursor: pointer;
+  text-decoration: none;
+}
+.has-value.Select--single > .Select-control .Select-value a.Select-value-label:hover,
+.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:hover,
+.has-value.Select--single > .Select-control .Select-value a.Select-value-label:focus,
+.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:focus {
+  color: #007eff;
+  outline: none;
+  text-decoration: underline;
+}
+.Select-input {
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.Select-input > input {
+  width: 100%;
+  background: none transparent;
+  border: 0 none;
+  box-shadow: none;
+  cursor: default;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  outline: none;
+  line-height: 14px;
+  /* For IE 8 compatibility */
+  padding: 8px 0 12px;
+  /* For IE 8 compatibility */
+  -webkit-appearance: none;
+}
+.is-focused .Select-input > input {
+  cursor: text;
+}
+.has-value.is-pseudo-focused .Select-input {
+  opacity: 0;
+}
+.Select-control:not(.is-searchable) > .Select-input {
+  outline: none;
+}
+.Select-loading-zone {
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 16px;
+}
+.Select-loading {
+  -webkit-animation: Select-animation-spin 400ms infinite linear;
+  -o-animation: Select-animation-spin 400ms infinite linear;
+  animation: Select-animation-spin 400ms infinite linear;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-right-color: #333;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.Select-clear-zone {
+  -webkit-animation: Select-animation-fadeIn 200ms;
+  -o-animation: Select-animation-fadeIn 200ms;
+  animation: Select-animation-fadeIn 200ms;
+  color: #999;
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 17px;
+}
+.Select-clear-zone:hover {
+  color: #D0021B;
+}
+.Select-clear {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+}
+.Select--multi .Select-clear-zone {
+  width: 17px;
+}
+.Select-arrow-zone {
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 25px;
+  padding-right: 5px;
+}
+.Select-arrow {
+  border-color: #999 transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 2.5px;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  position: relative;
+}
+.is-open .Select-arrow,
+.Select-arrow-zone:hover > .Select-arrow {
+  border-top-color: #666;
+}
+.Select--multi .Select-multi-value-wrapper {
+  display: inline-block;
+}
+.Select .Select-aria-only {
+  display: inline-block;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  float: left;
+}
+@-webkit-keyframes Select-animation-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes Select-animation-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.Select-menu-outer {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top-color: #e6e6e6;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin-top: -1px;
+  max-height: 200px;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 1;
+  -webkit-overflow-scrolling: touch;
+}
+.Select-menu {
+  max-height: 198px;
+  overflow-y: auto;
+}
+.Select-option {
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #666666;
+  cursor: pointer;
+  display: block;
+  padding: 8px 10px;
+}
+.Select-option:last-child {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.Select-option.is-selected {
+  background-color: #f5faff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.04);
+  color: #333;
+}
+.Select-option.is-focused {
+  background-color: #ebf5ff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.08);
+  color: #333;
+}
+.Select-option.is-disabled {
+  color: #cccccc;
+  cursor: default;
+}
+.Select-noresults {
+  box-sizing: border-box;
+  color: #999999;
+  cursor: default;
+  display: block;
+  padding: 8px 10px;
+}
+.Select--multi .Select-input {
+  vertical-align: middle;
+  margin-left: 10px;
+  padding: 0;
+}
+.Select--multi.has-value .Select-input {
+  margin-left: 5px;
+}
+.Select--multi .Select-value {
+  background-color: #ebf5ff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.08);
+  border-radius: 2px;
+  border: 1px solid #c2e0ff;
+  /* Fallback color for IE 8 */
+  border: 1px solid rgba(0, 126, 255, 0.24);
+  color: #007eff;
+  display: inline-block;
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-left: 5px;
+  margin-top: 5px;
+  vertical-align: top;
+}
+.Select--multi .Select-value-icon,
+.Select--multi .Select-value-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+.Select--multi .Select-value-label {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  cursor: default;
+  padding: 2px 5px;
+}
+.Select--multi a.Select-value-label {
+  color: #007eff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.Select--multi a.Select-value-label:hover {
+  text-decoration: underline;
+}
+.Select--multi .Select-value-icon {
+  cursor: pointer;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-right: 1px solid #c2e0ff;
+  /* Fallback color for IE 8 */
+  border-right: 1px solid rgba(0, 126, 255, 0.24);
+  padding: 1px 5px 3px;
+}
+.Select--multi .Select-value-icon:hover,
+.Select--multi .Select-value-icon:focus {
+  background-color: #d8eafd;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 113, 230, 0.08);
+  color: #0071e6;
+}
+.Select--multi .Select-value-icon:active {
+  background-color: #c2e0ff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.24);
+}
+.Select--multi.is-disabled .Select-value {
+  background-color: #fcfcfc;
+  border: 1px solid #e3e3e3;
+  color: #333;
+}
+.Select--multi.is-disabled .Select-value-icon {
+  cursor: not-allowed;
+  border-right: 1px solid #e3e3e3;
+}
+.Select--multi.is-disabled .Select-value-icon:hover,
+.Select--multi.is-disabled .Select-value-icon:focus,
+.Select--multi.is-disabled .Select-value-icon:active {
+  background-color: #fcfcfc;
+}
+/*end searchable combo*/
+
+
+/*custom validation style*/
+.has-error .Select-control
+{
+    border-color: #a94442;
+}
+
+.grand_total {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.react-datepicker__input-container, .react-datepicker-wrapper {
+    width: 100%;
+}
+.no-z-index {
+    z-index: 0 !important;
+}
+.panel-heading a:after {
+   
+}
+.panel-heading a.collapsed:after {
+    content:"\e080";
+}
+.no-pan-head  a:after{
+   font-family:'Glyphicons Halflings';
+   content:"\e114";
+    float: right;
+    color: grey;
+}
+
+/*overwrite bootstrap styles*/
+.input-group .form-control {
+    z-index: 0;
+}
+.fullscreen{ overflow-y: scroll;  height: 100%; width: 100%;
+  background-color:#d3f1f1;
+}
+.btn-smt { background:#003d88; border-color: #002d88; }
+.blc { color: #333; }
+.login-form {
+    /* margin-top: 60px; */
+    margin-top: 150px;
+    margin-bottom: 225px;
+}
+#app, .bgback {  height: 100%; }
+
+
+.my_table.table>tbody>tr>td, .my_table.table>tbody>tr>th { font-size:11px; padding:4px 8px; line-height:1; vertical-align:middle; }
+
+.thcolor {background-color: #3bc0c3;}
+
+.sty_tabl { }
+.sty_tabl .thcolor {
+    background-color: #3bc0c3; color: #000;
+}
+.my_table.sty_tabl.table>tbody>tr>td {  
+        border: 1px solid #8a8a8a;
+    color: #000;
+}
+.table-bordered.sty_tabl>thead>tr>th, .table-bordered.sty_tabl>tbody>tr>td  { border: 1px solid #8a8a8a; }
+.fix_full { position:fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 1111; background-color: #d3f1f1;}
+

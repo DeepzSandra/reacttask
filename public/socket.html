@@ -1,0 +1,72 @@
+<!doctype html>  
+<html lang="en">  
+    <head>
+
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <div id="future"></div>
+        <form id="form" id="chat_form">
+            <input id="chat_input" type="text">
+            <input type="button" value="connect" id="connect">
+        </form>
+        <div>
+  <label for="files" class="btn">Select Image</label>
+  <input id="files" style="visibility:hidden;" type="file">
+</div>
+         <script src="/assets/js/jquery-1.9.1.min.js"></script>
+        <script src="/assets/js/socket.io.js"></script>
+        <script>  
+            
+
+            /*socket.on('news', function (data) {
+                console.log(data);
+                socket.emit('message', { my: 'data' });
+            });*/
+            //*socket.emit('message', { my: 'data' });
+            var socketgis = function() {
+                var socket = io('http://localhost:8080');
+                return {
+                    connect: function() {
+                        socket.connect();
+                    },
+                    on: function(eventName, callback) {
+                        socket.on(eventName, function() {
+                            var args = arguments;
+                            callback.apply(socket, args);
+                        });
+                    },
+                    disconnect: function() {
+                        //console.log("disconnect");
+                        socket.disconnect();
+                    },
+                    connected: function() {
+                        return socket.connected;
+                    },
+                    emit: function(eventName, data, callback) {
+                        console.log(eventName, data);
+                        socket.emit(eventName, data, function() {
+                            var args = arguments;
+                            $rootScope.$apply(function() {
+                                if(callback) {
+                                    callback.apply(socket, args);
+                                }
+                            });
+                        })
+                    }
+                };
+         }
+         var skt = socketgis();
+         skt.on("login", function(data) {
+                console.log(data,"00000000090");
+         });
+         $('#connect').click(function() {
+                        var message = $('#chat_input').val();
+                        //socket.emit('messages', message);*/
+
+                        skt.connect();
+                        skt.emit("message", {"fname": "login", "username": message});
+                    });
+        </script> 
+    </body>
+</html>

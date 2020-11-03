@@ -1,0 +1,37 @@
+/*################ Theme Header With Content Overlay Effect Start #####################*/
+#vbs-header[vbs-lpanel-effect="overlay"] .vbs-right-header[vbs-position-type="fixed"] {
+  margin-left:  0px;
+  padding-right: 0px;
+}
+#vbs-header[vbs-lpanel-effect="overlay"].vbs-minimized-lpanel .vbs-right-header[vbs-position-type="fixed"] {
+    margin-left:  50px;
+    padding-right: 50px;
+}
+#vbs-header[vbs-lpanel-effect="overlay"] .vbs-right-header[vbs-position-type="relative"] {
+  margin-left: 0px;
+}
+#vbs-header.vbs-minimized-lpanel[vbs-lpanel-effect="overlay"] .vbs-right-header[vbs-position-type="relative"] {
+  margin-left: 50px;   
+}
+#vbs-header[vbs-lpanel-effect="overlay"] .vbs-right-header[vbs-position-type="relative"] .vbs-sidebar-toggle a:after {
+    margin-left:  230px;
+	
+}
+#vbs-header.vbs-minimized-lpanel[vbs-lpanel-effect="overlay"] .vbs-right-header[vbs-position-type="relative"] .vbs-sidebar-toggle a:after {
+     margin-left: 0px;
+}
+#vbs-header[vbs-lpanel-effect="overlay"] .vbs-right-header[vbs-position-type="fixed"] .vbs-sidebar-toggle a:after {
+  margin-left:  230px;
+}
+#vbs-header.vbs-minimized-lpanel[vbs-lpanel-effect="overlay"] .vbs-right-header[vbs-position-type="fixed"] .vbs-sidebar-toggle a:after {
+    margin-left:  0px; 
+}
+
+
+#vbsapp-container[vbs-lpanel-effect="overlay"] #main-content{
+	 margin-left: 50px;
+}
+#vbsapp-container[vbs-lpanel-effect="overlay"].vbs-minimized-lpanel #main-content{
+	 margin-left: 50px;
+}
+/*################ Theme Header With Content Overlay Effect Close #####################*/

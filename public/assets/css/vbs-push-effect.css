@@ -1,0 +1,42 @@
+/*################ Theme Header With Content Push Effect Start #####################*/
+#vbs-header[vbs-lpanel-effect="push"] .vbs-right-header[vbs-position-type="fixed"] {
+    margin-left: 230px;
+    margin-right: -230px;
+	padding-right:0px
+}
+#vbs-header.vbs-minimized-lpanel[vbs-lpanel-effect="push"] .vbs-right-header[vbs-position-type="fixed"] {
+     margin-left: 50px;
+	margin-right: 0px;
+	padding-right:50px
+}
+#vbs-header[vbs-lpanel-effect="push"] .vbs-right-header[vbs-position-type="relative"] {
+    margin-left: 230px;
+    margin-right: -230px;
+}
+#vbs-header[vbs-lpanel-effect="push"].vbs-minimized-lpanel .vbs-right-header[vbs-position-type="relative"] {
+    margin-left: 50px;
+	margin-right: 0px;
+}
+#vbs-header[vbs-lpanel-effect="push"] .vbs-right-header[vbs-position-type="relative"] .vbs-sidebar-toggle a:after {
+ margin-left:  0px;
+}
+#vbs-header.vbs-minimized-lpanel[vbs-lpanel-effect="push"] .vbs-right-header[vbs-position-type="relative"] .vbs-sidebar-toggle a:after {
+ margin-left:  0px;
+}
+#vbs-header[vbs-lpanel-effect="push"] .vbs-right-header[vbs-position-type="fixed"] .vbs-sidebar-toggle a:after {
+    margin-left:  0px;
+}
+#vbs-header.vbs-minimized-lpanel[vbs-lpanel-effect="push"] .vbs-right-header[vbs-position-type="fixed"] .vbs-sidebar-toggle a:after {
+    margin-left:  0px;
+}
+
+#vbsapp-container[vbs-lpanel-effect="push"] #main-content{
+	margin-left: 230px;
+	margin-right: -230px;
+}
+#vbsapp-container[vbs-lpanel-effect="push"].vbs-minimized-lpanel #main-content{
+	 margin-left: 50px;
+     margin-right: 0px;	 
+}
+
+/*################ Theme Header With Content Push Effect Close #####################*/

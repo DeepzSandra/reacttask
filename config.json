@@ -1,0 +1,27 @@
+{
+  "development": {
+    "errorHandlerOptions": {
+      "dumpExceptions": true,
+      "showStack": true
+    }
+  },
+  "production": {
+    "errorHandlerOptions": {
+      "dumpExceptions": false,
+      "showStack": false
+    }
+  },
+  "env": "development",
+  "nasCount": 0,
+  "resourceurl" : "http://localhost:8081/",
+  "burl": "http://localhost:8085/",
+  "copyrightowner": "DOO",
+  "expiryApp": "0",
+  "expiryDate": "2016-12-31",
+  "hpkp": [
+    "nfPw_8Z+wx",
+    "Szq8x5]<E2"
+  ],
+  "mac": ""
+}
+
